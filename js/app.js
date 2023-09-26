@@ -1,21 +1,26 @@
 $(document).ready(function(){
 
-    // Function to fetch JSON data
-    $.ajax({
-        url: 'heroSection.json',
-        type: 'GET',
-        dataTyped: 'json',
-        success: function(data){
-            jsonData = data; // Store the JSON data
-        },
-        error: function(status, error){
-            console('Error Fetching Data', status, error)
-        }
-    });
 
-});
+    let currentIndex = 0; // Initialize the current index for the slideshow
+    let jsonData; // Store JSON data
 
-// Function to show a specific slide
+    // Function to fetch JSON data and initiate
+    function fetchAndInitiateSlideshow() {
+        $.ajax({
+            url: 'heroSection.json',
+            type: 'GET',
+            dataTyped: 'json',
+            success: function(data){
+                jsonData = data; // Store the JSON data
+                showSlide(currentIndex);
+            },
+            error: function(status, error){
+                console('Error Fetching Data', status, error)
+            }
+        });
+    }
+
+    // Function to show a specific slide
 function showSlide(index) {
     const item = jsonData[index];
     const heroContainer = $('.hero');
@@ -35,3 +40,6 @@ function showSlide(index) {
 
     heroContainer.append(slideHTML);
 }
+
+fetchAndInitiateSlideshow();
+});

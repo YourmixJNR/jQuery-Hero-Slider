@@ -41,5 +41,6 @@ function showSlide(index) {
     heroContainer.append(slideHTML);
 }
 
+// Initialize the slideshow
 fetchAndInitiateSlideshow();
 });

@@ -1,0 +1,17 @@
+[
+    {
+        "backgroundImg" : "assets/BGIMGt.jpg",
+        "bigText" : "HEY Welcome Here",
+        "smallText" : "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "backgroundImg" : "assets/BGIMGttt.jpg",
+        "bigText" : "Let's Get You Started",
+        "smallText" : "."
+    },
+    {
+        "backgroundImg" : "assets/BGIMGttt.jpg",
+        "bigText" : "What Are You Doing Today ?",
+        "smallText" : "Ullam doloremque expedita facilis repudiandae sit ipsa libero a cum."
+    }
+]

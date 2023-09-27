@@ -14,6 +14,8 @@ $(document).ready(function(){
             success: function(data){
                 jsonData = data; // Store the JSON data
                 showSlide(currentIndex);
+
+                startSlideShow();
             },
             error: function(status, error){
                 console('Error Fetching Data', status, error)
@@ -47,7 +49,7 @@ $(document).ready(function(){
     // Function to start the automatic slideshow
     function startSlideShow() {
         slideInterval = setInterval(function(){
-            currentIndex = (currentIndex + 1) % jsonData;
+            currentIndex = (currentIndex + 1) % jsonData.length;
             showSlide(currentIndex);
         }, 3000) // Change slide every 3 seconds
     }
@@ -55,5 +57,4 @@ $(document).ready(function(){
     // Initialize the slideshow
     fetchAndInitiateSlideshow();
 
-    // startSlideShow();
 });

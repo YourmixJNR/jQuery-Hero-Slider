@@ -15,8 +15,8 @@ To use this slideshow component, follow these steps:
    ```
 2. Create a JSON file named heroSection.json with the data for your slideshow. The JSON structure should include objects with backgroundImg, bigText, and smallText properties for each slide.
 
-```html
-[
+   ```html
+   [
     {
         "backgroundImg": "image1.jpg",
         "bigText": "Slide 1 Title",
@@ -28,13 +28,12 @@ To use this slideshow component, follow these steps:
         "smallText": "Slide 2 Description"
     },
     // Add more slides as needed
-]
-```
+   ```
 
 3. Include the JavaScript code for the slideshow in your HTML file. Make sure to include this code inside a <script> tag within a $(document).ready() function.
 
-```html
-$(document).ready(function(){
-    // Your slideshow code here
-});
-```
+    ```html
+    $(document).ready(function(){
+        // Your slideshow code here
+    });
+   ```

@@ -53,7 +53,7 @@ $(document).ready(function(){
         slideInterval = setInterval(function(){
             currentIndex = (currentIndex + 1) % jsonData.length;
             showSlide(currentIndex);
-        }, 9000); // Change slide every 3 seconds
+        }, 3000); // Change slide every 3 seconds
     };
 
     // Function for next and previous buttons
@@ -61,13 +61,22 @@ $(document).ready(function(){
         $('.next-button').on('click', function(){
             currentIndex = (currentIndex + 1) % jsonData.length;
             showSlide(currentIndex);
+            resetSlideshowInterval(); // Reset the interval when manually navigating
         });
 
         $('.prev-button').on('click', function(){
-            currentIndex = (currentIndex - 1) % jsonData.length;
+            currentIndex = (currentIndex - 1 + jsonData.length) % jsonData.length;
             showSlide(currentIndex);
+            resetSlideshowInterval(); // Reset the interval when manually navigating
         })
     };
+    
+    // Function to reset the slideshow interval when manually navigating
+    // Function to reset the slideshow interval when manually navigating
+    function resetSlideshowInterval() {
+        clearInterval(slideInterval);
+        startSlideshow();
+    }
 
     // Initialize the slideshow
     fetchAndInitiateSlideshow();

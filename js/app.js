@@ -72,10 +72,9 @@ $(document).ready(function(){
     };
     
     // Function to reset the slideshow interval when manually navigating
-    // Function to reset the slideshow interval when manually navigating
     function resetSlideshowInterval() {
         clearInterval(slideInterval);
-        startSlideshow();
+        startSlideShow();
     }
 
     // Initialize the slideshow

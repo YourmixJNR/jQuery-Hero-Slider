@@ -1,16 +1,16 @@
 [
     {
-        "backgroundImg" : "assets/tiger1.jpg",
+        "backgroundImg" : "assets/BackgroundImg3.jpg",
         "bigText" : "HEY Welcome Here",
         "smallText" : "Lorem ipsum dolor sit amet consectetur adipisicing elit."
     },
     {
-        "backgroundImg" : "assets/tiger2.jpg",
+        "backgroundImg" : "assets/BackgroundImg2.jpg",
         "bigText" : "Let's Get You Started",
         "smallText" : "Lorem ipsum dolor sit amet consectetur adipisicing elit.."
     },
     {
-        "backgroundImg" : "assets/tiger3.jpg",
+        "backgroundImg" : "assets/BackgroundImg3.jpg",
         "bigText" : "What Are You Doing Today ?",
         "smallText" : "Ullam doloremque expedita facilis repudiandae sit ipsa libero a cum."
     }

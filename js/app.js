@@ -33,8 +33,10 @@ function showSlide(index) {
     const slideHTML = `
         <div class="slide">
             <img src="${imgURL}" alt="Slide Image">
-            <h1>${bigText}</h1>
-            <p>${smallText}</p>
+            <div class="hero-content">
+                <h1>${bigText}</h1>
+                <p>${smallText}</p>
+            </div>
         </div>
     `;
 

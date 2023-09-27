@@ -21,28 +21,28 @@ $(document).ready(function(){
     }
 
     // Function to show a specific slide
-function showSlide(index) {
-    const item = jsonData[index];
-    const heroContainer = $('.hero');
-    heroContainer.empty();
+    function showSlide(index) {
+        const item = jsonData[index];
+        const heroContainer = $('.hero');
+        heroContainer.empty();
 
-    const imgURL = item.backgroundImg;
-    const bigText = item.bigText;
-    const smallText = item.smallText;
+        const imgURL = item.backgroundImg;
+        const bigText = item.bigText;
+        const smallText = item.smallText;
 
-    const slideHTML = `
-        <div class="slide">
-            <img src="${imgURL}" alt="Slide Image">
-            <div class="hero-content">
-                <h1>${bigText}</h1>
-                <p>${smallText}</p>
+        const slideHTML = `
+            <div class="slide">
+                <img src="${imgURL}" alt="Slide Image">
+                <div class="hero-content">
+                    <h1>${bigText}</h1>
+                    <p>${smallText}</p>
+                </div>
             </div>
-        </div>
-    `;
+        `;
 
-    heroContainer.append(slideHTML);
+        heroContainer.append(slideHTML);
 }
 
-// Initialize the slideshow
-fetchAndInitiateSlideshow();
+    // Initialize the slideshow
+    fetchAndInitiateSlideshow();
 });

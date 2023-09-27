@@ -37,3 +37,22 @@ To use this slideshow component, follow these steps:
         // Your slideshow code here
     });
    ```
+## Fetching Data
+
+The ```fetchAndInitiateSlideshow``` function is responsible for fetching the JSON data from ```heroSection.json``` using jQuery's AJAX method. Once the data is retrieved successfully, it initiates the slideshow.
+
+## Displaying Slides
+
+The ```showSlide``` function displays a specific slide by updating the HTML content with the information from the JSON data. It sets the background image, title, and description for each slide.
+
+## Automatic Slideshow
+
+The ```startSlideShow``` function initializes an automatic slideshow that cycles through the slides every 3 seconds by updating the ```currentIndex```.
+
+## Manual Navigation
+
+You can manually navigate through the slides using the next and previous buttons. The ``addEventHandlers`` function adds event listeners to these buttons and calls ```resetSlideshowInterval``` to reset the slideshow interval when navigating manually.
+
+## Resetting Slideshow Interval
+
+The ```resetSlideshowInterval`` function clears the interval and restarts the automatic slideshow. This ensures that the slideshow continues to cycle even after manual navigation.

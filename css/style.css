@@ -24,6 +24,10 @@ body {
 
 /* Hero Section */
 
+.hero {
+    margin-bottom: 10px;
+}
+
 .hero .slide img {
     min-height: 100%;
     min-width: 1024px;
@@ -57,5 +61,16 @@ body {
 }
 
 .hero .btns {
-   
+   display: flex;
+   justify-content: space-around;
+}
+
+.hero .btns .prev-button,
+.hero .btns .next-button {
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 30px;
+  border: none;
 }

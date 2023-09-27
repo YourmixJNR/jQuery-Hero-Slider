@@ -15,6 +15,8 @@ $(document).ready(function(){
                 jsonData = data; // Store the JSON data
                 showSlide(currentIndex);
 
+                addEventHandlers(); // Add event handlers for next and previous buttons
+
                 startSlideShow();
             },
             error: function(status, error){
@@ -26,7 +28,7 @@ $(document).ready(function(){
     // Function to show a specific slide
     function showSlide(index) {
         const item = jsonData[index];
-        const heroContainer = $('.hero');
+        const heroContainer = $('.hero .slider');
         heroContainer.empty();
 
         const imgURL = item.backgroundImg;
@@ -51,8 +53,21 @@ $(document).ready(function(){
         slideInterval = setInterval(function(){
             currentIndex = (currentIndex + 1) % jsonData.length;
             showSlide(currentIndex);
-        }, 3000) // Change slide every 3 seconds
-    }
+        }, 9000); // Change slide every 3 seconds
+    };
+
+    // Function for next and previous buttons
+    function addEventHandlers() {
+        $('.next-button').on('click', function(){
+            currentIndex = (currentIndex + 1) % jsonData.length;
+            showSlide(currentIndex);
+        });
+
+        $('.prev-button').on('click', function(){
+            currentIndex = (currentIndex - 1) % jsonData.length;
+            showSlide(currentIndex);
+        })
+    };
 
     // Initialize the slideshow
     fetchAndInitiateSlideshow();

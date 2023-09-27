@@ -44,13 +44,16 @@ body {
 }
 
 .hero .hero-content h1 {
+    margin-bottom: 0.5em;
   font-size: 2.5rem;
   color: #fff;
+  opacity: 0; /* Set initial opacity to 0 */
+  animation-name: animate-pop;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-duration: 0.5s;
+  animation-delay: 0.5s; /* Add the animation-delay property */
+  animation-fill-mode: forwards; /* Keeps the final state of the animation */
   
-}
-
-.hero .hero-content h1 {
-  margin-bottom: 0.5em;
 }
 
 .hero .hero-content p {
@@ -58,6 +61,12 @@ body {
   font-family: 'mulish';
   font-weight: 300;
   color: #fff;
+  opacity: 0; /* Set initial opacity to 0 */
+  animation-name: animate-pop-p;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-duration: 0.5s;
+  animation-delay: 1s; /* Add the animation-delay property */
+  animation-fill-mode: forwards; /* Keeps the final state of the animation */
 }
 
 .hero .btns {

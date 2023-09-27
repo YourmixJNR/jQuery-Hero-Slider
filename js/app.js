@@ -3,6 +3,7 @@ $(document).ready(function(){
 
     let currentIndex = 0; // Initialize the current index for the slideshow
     let jsonData; // Store JSON data
+    let slideInterval; //Interval for automatic sliding
 
     // Function to fetch JSON data and initiate
     function fetchAndInitiateSlideshow() {
@@ -43,6 +44,16 @@ $(document).ready(function(){
         heroContainer.append(slideHTML);
     }
 
+    // Function to start the automatic slideshow
+    function startSlideShow() {
+        slideInterval = setInterval(function(){
+            currentIndex = (currentIndex + 1) % jsonData;
+            showSlide(currentIndex);
+        }, 3000) // Change slide every 3 seconds
+    }
+
     // Initialize the slideshow
     fetchAndInitiateSlideshow();
+
+    // startSlideShow();
 });

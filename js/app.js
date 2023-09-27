@@ -41,7 +41,7 @@ $(document).ready(function(){
         `;
 
         heroContainer.append(slideHTML);
-}
+    }
 
     // Initialize the slideshow
     fetchAndInitiateSlideshow();
